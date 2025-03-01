@@ -9,8 +9,8 @@ import { dalle } from '../utils/dalle';
 import Modal from './Modal';
 import Setting from './Setting';
 
-const options = ['ChatGPT', 'DALL·E'];
-const gptModel = ['gpt-3.5-turbo', 'gpt-4'];
+const options = ['ChatGPT', 'DALL·E','Dummy' ];
+const gptModel = ['gpt-3.5-turbo', 'gpt-4','Dummy' ];
 const template = [
   {
     title: 'Plan a trip',
@@ -145,6 +145,11 @@ const ChatView = () => {
           onClick={() => setGpt(gptModel[1])}
           className={`${gpt == gptModel[1] && 'tab-active'} tab`}>
           GPT-4
+        </a>
+        <a
+          onClick={() => setGpt(gptModel[2])}
+          className={`${gpt == gptModel[2] && 'tab-active'} tab`}>
+          Dummy
         </a>
       </div>
 
