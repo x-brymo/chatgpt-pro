@@ -77,11 +77,11 @@ const ChatView = () => {
   const sendMessage = async (e) => {
     e.preventDefault();
 
-    const key = window.localStorage.getItem('api-key');
-    if (!key) {
-      setModalOpen(true);
-      return;
-    }
+   // const key = window.localStorage.getItem('api-key');
+   // if (!key) {
+    //  setModalOpen(true);
+      //return;
+   // }
 
     const cleanPrompt = replaceProfanities(formValue);
 
@@ -202,10 +202,11 @@ const ChatView = () => {
             <MdSend size={30} />
           </button>
         </div>
-      </form>
+      </form> 
+      {/*
       <Modal title='Setting' modalOpen={modalOpen} setModalOpen={setModalOpen}>
         <Setting modalOpen={modalOpen} setModalOpen={setModalOpen} />
-      </Modal>
+      </Modal>*/}
     </main>
   );
 };
